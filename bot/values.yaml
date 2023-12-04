@@ -1,0 +1,17 @@
+# Default values for bot.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: zadorozhnai
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "v1.0.0"
+  arch: amd64
+
+  secret:
+    name: kbot
+    tokenKey: token
+    tokenName: TELE_TOKEN
