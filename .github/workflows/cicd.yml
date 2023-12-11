@@ -19,6 +19,10 @@ jobs:
 
       - name: Run test
         run: make test
+
+      - name: Build
+        run: make image TARGETOS=$OS TARGETARCH=$ARCH
+        
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v1
         with:
