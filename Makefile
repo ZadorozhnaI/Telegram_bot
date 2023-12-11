@@ -1,9 +1,10 @@
 APP=$(shell basename $(shell git remote get-url origin))
 APP_NAME=kbot
-REGISTRY=zadorozhnai
+REGISTRY=ZadorozhnaI
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 TARGETOS=linux
 TARGETARCH=amd64
+TAG = ${REGISTRY}/${APP}:${VERSION}-$(TARGETOS)-${TARGETARCH}
 
 format:
 	gofmt -s -w ./
@@ -28,3 +29,4 @@ push:
 
 clean:
 	rm -rf kbot
+	docker rmi -f $(TAG)

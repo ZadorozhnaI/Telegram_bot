@@ -5,10 +5,12 @@
 replicaCount: 1
 
 image:
-  repository: zadorozhnai
+  registry: "ghcr.io"
+  repository: ZadorozhnaI/kbot
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.0"
+  tag: "v1.0.3-a560eee-linux-amd64"
+  os: linux
   arch: amd64
 
   secret:
