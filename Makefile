@@ -22,10 +22,11 @@ build: format get
 
 image:
 	docker build . -t ${REGISTRY}:${VERSION}-$(TARGETOS)-$(TARGETARCH)
-
+	docker build . -t ghcr.io/${REGISTRY}:${VERSION}-$(TARGETOS)-$(TARGETARCH)
 push:
 	docker push ${REGISTRY}:${VERSION}-$(TARGETOS)-$(TARGETARCH)
-
+	docker push ghcr.io/${REGISTRY}:${VERSION}-$(TARGETOS)-$(TARGETARCH)
 clean:
 	rm -rf kbot
- 	#docker rmi -f ${REGISTRY}:${VERSION}-$(TARGETOS)-$(TARGETARCH)
+ 	docker rmi -f ${REGISTRY}:${VERSION}-$(TARGETOS)-$(TARGETARCH)
+	docker rmi ghcr.io/${REGISTRY}:${VERSION}-$(TARGETOS)-$(TARGETARCH)
