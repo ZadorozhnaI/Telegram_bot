@@ -3,7 +3,7 @@
 ### Link: https://t.me/zadorozhnai_bot
 
 ### Instructions
-1. Starting GitHub Codespaces.
+1. Starting GitHub Codespaces
 2. Module initialization. This will create the go.mod file where we will store all the modules that are used in the code.
    **`go mod init github.com/ZadorozhnaI/kbot`**
 3. Installing the Cobra CLI code generator. Cobra is a library providing a simple interface to create powerful modern CLI interfaces similar to git & go tools. Go will automatically install it in your $GOPATH/bin directory which should be in your $PATH.  
